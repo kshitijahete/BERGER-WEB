@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background-color: #ff6600;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.search-bar {
+  padding: 8px;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+}
+
+.cart-btn {
+  background-color: white;
+  color: #ff6600;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  background: url("hero-burger.jpg") center/cover no-repeat;
+  padding: 50px;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 2em;
+}
+
+.hero p {
+  font-size: 1.2em;
+}
+
+.order-btn {
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Burger Cards */
+.burger-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.burger-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.burger-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.burger-card h3 {
+  margin: 10px 0;
+}
+
+.burger-card p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.burger-card span {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  margin: 10px 0;
+}
+
+.burger-card button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+}

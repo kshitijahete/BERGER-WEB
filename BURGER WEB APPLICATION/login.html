@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Burger Delight</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+      }
+
+      .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .login-box {
+        background-color: white;
+        padding: 40px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .login-box h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #ff6f3c;
+      }
+
+      .login-box form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .login-box input[type="text"],
+      .login-box input[type="password"] {
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .login-box button {
+        padding: 10px;
+        font-size: 1rem;
+        color: white;
+        background-color: #ff6f3c;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .login-box button:hover {
+        background-color: #e65c28;
+      }
+
+      .login-box a {
+        display: block;
+        margin-top: 10px;
+        text-decoration: none;
+        color: #555;
+        font-size: 0.9rem;
+      }
+
+      .login-box a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-box">
+        <h1>Login</h1>
+        <form action="#" method="post">
+          <input type="text" name="username" placeholder="Username" required />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Login</button>
+        </form>
+        <a href="#">Forgot your password?</a>
+        <a href="#">Don't have an account? Sign Up</a>
+      </div>
+    </div>
+  </body>
+</html>

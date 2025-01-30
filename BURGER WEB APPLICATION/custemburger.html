@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customize Your Burger - Burger Bliss</title>
+    <link rel="stylesheet" href="custemburger.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Burger Bliss</div>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="aboutua.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#cart">Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="customize">
+      <h1>Customize Your Burger</h1>
+      <form id="burgerForm">
+        <div class="section">
+          <h2>Choose Your Bun</h2>
+          <label
+            ><input type="radio" name="bun" value="Classic Bun" required />
+            Classic Bun</label
+          >
+          <label
+            ><input type="radio" name="bun" value="Whole Wheat Bun" /> Whole
+            Wheat Bun</label
+          >
+          <label
+            ><input type="radio" name="bun" value="Gluten-Free Bun" />
+            Gluten-Free Bun</label
+          >
+        </div>
+        <div class="section">
+          <h2>Choose Your Patty</h2>
+          <label
+            ><input type="radio" name="patty" value="Beef Patty" required />
+            Beef Patty</label
+          >
+          <label
+            ><input type="radio" name="patty" value="Chicken Patty" /> Chicken
+            Patty</label
+          >
+          <label
+            ><input type="radio" name="patty" value="Veggie Patty" /> Veggie
+            Patty</label
+          >
+        </div>
+        <div class="section">
+          <h2>Add Toppings</h2>
+          <label
+            ><input type="checkbox" name="toppings" value="Lettuce" />
+            Lettuce</label
+          >
+          <label
+            ><input type="checkbox" name="toppings" value="Tomato" />
+            Tomato</label
+          >
+          <label
+            ><input type="checkbox" name="toppings" value="Onion" />
+            Onion</label
+          >
+          <label
+            ><input type="checkbox" name="toppings" value="Cheese" />
+            Cheese</label
+          >
+          <label
+            ><input type="checkbox" name="toppings" value="Pickles" />
+            Pickles</label
+          >
+        </div>
+        <div class="section">
+          <h2>Choose Your Sauce</h2>
+          <label
+            ><input type="radio" name="sauce" value="Ketchup" required />
+            Ketchup</label
+          >
+          <label><input type="radio" name="sauce" value="Mayo" /> Mayo</label>
+          <label><input type="radio" name="sauce" value="BBQ" /> BBQ</label>
+          <label
+            ><input type="radio" name="sauce" value="Mustard" /> Mustard</label
+          >
+        </div>
+        <div class="section">
+          <h2>Add Extras</h2>
+          <label
+            ><input type="checkbox" name="extras" value="Bacon" /> Bacon</label
+          >
+          <label
+            ><input type="checkbox" name="extras" value="Avocado" />
+            Avocado</label
+          >
+          <label><input type="checkbox" name="extras" value="Egg" /> Egg</label>
+        </div>
+        <button type="submit">Order Now</button>
+      </form>
+      <div id="orderSummary" class="hidden">
+        <h2>Your Burger Summary</h2>
+        <img
+          src="burger-image.png"
+          alt="Your Custom Burger"
+          class="burger-image"
+        />
+        <p id="summaryText"></p>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 Burger Bliss. All rights reserved.</p>
+    </footer>
+    <script src="custemburger.js"></script>
+  </body>
+</html>

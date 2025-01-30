@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Burger Delight</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        line-height: 1.6;
+      }
+
+      nav {
+        background-color: #ff6f3c;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+      }
+
+      nav .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 15px;
+      }
+
+      nav ul li {
+        display: inline;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #ffe6d5;
+      }
+
+      .hero {
+        background-color: #ff6f3c;
+        color: white;
+        text-align: center;
+        padding: 50px 20px;
+      }
+
+      .hero h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+      }
+
+      .content {
+        padding: 20px;
+        max-width: 900px;
+        margin: 20px auto;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .content h2 {
+        font-size: 2rem;
+        color: #333;
+      }
+
+      .content p {
+        color: #666;
+        margin: 10px 0;
+      }
+
+      .team {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .team-member {
+        text-align: center;
+        background-color: #f9f9f9;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .team-member:hover {
+        transform: translateY(-5px);
+      }
+
+      .team-member img {
+        width: 100%;
+        max-width: 150px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+
+      .team-member h3 {
+        font-size: 1.5rem;
+        color: #333;
+        margin: 10px 0 5px;
+      }
+
+      .team-member p {
+        font-size: 1rem;
+        color: #777;
+        margin: 5px 0;
+      }
+
+      .team-member .bio {
+        font-size: 0.9rem;
+        color: #555;
+        margin-top: 10px;
+        line-height: 1.4;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Burger Delight</div>
+      <ul>
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <h1>About Us</h1>
+      <p>Discover our story and meet the team behind Burger Delight.</p>
+    </div>
+
+    <div class="content">
+      <h2>Our Story</h2>
+      <p>
+        At Burger Delight, we are passionate about crafting the most delicious
+        burgers with the freshest ingredients. Since our humble beginnings,
+        we’ve grown into a beloved destination for burger enthusiasts. Our
+        mission is to deliver not only great food but also a memorable dining
+        experience.
+      </p>
+
+      <h2>Meet Our Team</h2>
+      <div class="team">
+        <div class="team-member">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGPPTqKNCOqdhabYYZtcgfhz3WFkkYeZdzNw&s"
+            alt="John Doe"
+          />
+          <h3>Kshitija Hete</h3>
+          <p>Founder & Chef</p>
+          <p class="bio">
+            John started Burger Delight with the dream of serving gourmet
+            burgers to everyone. With over 15 years of culinary experience, he
+            ensures every burger is crafted to perfection.
+          </p>
+        </div>
+        <div class="team-member">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0TZZQ8MlagFVVgxyEbiYv8-wwVXcceV3Gzw&s"
+            alt="Jane Smith"
+          />
+          <h3>Jane Smith</h3>
+          <p>Head Chief</p>
+          <p class="bio">
+            Jane keeps everything running smoothly at Burger Delight. Her
+            expertise in management and customer service guarantees an
+            exceptional dining experience.
+          </p>
+        </div>
+        <div class="team-member">
+          <img
+            src="data:image/jpeg;base64,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"
+            alt="Emily Johnson"
+          />
+          <h3>Emily Johnson</h3>
+          <p>Marketing Head</p>
+          <p class="bio">
+            Emily’s creativity and marketing strategies have put Burger Delight
+            on the map. She loves connecting with customers and sharing our
+            story.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer>&copy; 2025 Burger Delight. All rights reserved.</footer>
+  </body>
+</html>

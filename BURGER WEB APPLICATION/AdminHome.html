@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Burger Delight</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+      }
+
+      nav {
+        background-color: #ff6f3c;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      nav .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #ffe6d5;
+      }
+
+      .container {
+        padding: 40px;
+        text-align: center;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        padding: 20px;
+      }
+
+      .card {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 15px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        padding: 25px;
+        transition: transform 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-content {
+        background-color: white;
+        padding: 25px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .modal-content button {
+        padding: 12px 24px;
+        background-color: #ff6f3c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .modal-content button:hover {
+        background-color: #e65c28;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Burger Delight</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="/custemburger.html">Customize Burger</a></li>
+        <li><a href="/aboutua.html">About Us</a></li>
+        <li><a href="/Userfeedback.html">User Feedback</a></li>
+        <li><a href="/paymentdetail.html">Payment Detail</a></li>
+        <li><a href="/mainlogin.html">Logout</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h1>Welcome to Burger Delight!</h1>
+      <p>Explore our mouth-watering burgers and more.</p>
+      <div class="cards">
+        <script>
+          const burgers = [
+            { name: "Classic Burger", price: "$5.99" },
+            { name: "Cheese Burger", price: "$6.99" },
+            { name: "Veggie Burger", price: "$5.49" },
+            { name: "BBQ Burger", price: "$7.49" },
+            { name: "Spicy Chicken Burger", price: "$6.99" },
+            { name: "Mushroom Swiss Burger", price: "$7.99" },
+            { name: "Bacon Burger", price: "$8.49" },
+            { name: "Double Patty Burger", price: "$9.99" },
+            { name: "Fish Burger", price: "$6.49" },
+          ];
+
+          burgers.forEach((burger) => {
+            document.write(`
+              <div class="card">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/b13811eeee71e578bc6ca89eca0ec87f" alt="${burger.name}" />
+                <h3>${burger.name}</h3>
+                <p>${burger.price}</p>
+                <p>Delicious and freshly made.</p>
+                <button onclick="showModal('${burger.name}', '${burger.price}')">Order Now</button>
+              </div>
+            `);
+          });
+        </script>
+      </div>
+    </div>
+
+    <div class="modal" id="orderModal">
+      <div class="modal-content">
+        <h2>Order Confirmation</h2>
+        <p id="modalMessage">You selected a burger!</p>
+        <button onclick="redirectToPayment()">Proceed to Payment</button>
+        <button onclick="closeModal()">Close</button>
+      </div>
+    </div>
+
+    <footer>&copy; 2025 Burger Delight. All rights reserved.</footer>
+
+    <script>
+      function showModal(burgerName, burgerPrice) {
+        document.getElementById(
+          "modalMessage"
+        ).textContent = ` You selected: ${burgerName} - ${burgerPrice}`;
+        document.getElementById("orderModal").style.display = "flex";
+      }
+
+      function closeModal() {
+        document.getElementById("orderModal").style.display = "none";
+      }
+
+      function redirectToPayment() {
+        // Passing the selected burger details to the payment page
+        sessionStorage.setItem(
+          "selectedBurger",
+          JSON.stringify({
+            name: document
+              .getElementById("modalMessage")
+              .textContent.split(" - ")[0]
+              .split(": ")[1],
+            price: document
+              .getElementById("modalMessage")
+              .textContent.split(" - ")[1],
+          })
+        );
+        window.location.href = "/paymentdetail.html";
+      }
+    </script>
+  </body>
+</html>
